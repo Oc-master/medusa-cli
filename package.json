@@ -1,0 +1,33 @@
+{
+  "name": "medusa-cli",
+  "version": "1.0.0",
+  "description": "快速生成小程序基础框架的解决方案",
+  "main": "index.js",
+  "bin": {
+    "medusa": "bin/init.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/"
+  },
+  "keywords": [
+    "miniprogram",
+    "cli"
+  ],
+  "author": "O_c",
+  "license": "MIT",
+  "files": [
+    "./bin",
+    "./src"
+  ],
+  "dependencies": {
+    "commander": "^6.0.0",
+    "download-git-repo": "^3.0.2",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.2",
+    "ora": "^4.0.5"
+  }
+}
