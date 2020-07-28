@@ -1,7 +1,7 @@
 {
   "name": "miniprogram",
   "version": "1.0.0",
-  "description": "小程序",
+  "description": "",
   "main": "src/app.js",
   "scripts": {
     "dev": "medusa-server development",
