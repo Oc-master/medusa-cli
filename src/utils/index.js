@@ -1,14 +1,8 @@
-const fs = require('fs-extra');
+const chalk = require('chalk');
 const path = require('path');
 const childProcess = require('child_process');
 
 const generatePath = (root, targetPath) => path.resolve(root, targetPath);
-
-const copyFiles = (tempPath, targetPath) => {
-  const excludeList = ['.git', 'CHANGELOG.md', 'README.md'];
-  fs.copySync(tempPath, targetPath);
-  excludeList.forEach((item) => void fs.removeSync(path.resolve(targetPath, item)));
-};
 
 const runCommand = (cmd) => {
   return new Promise((resolve, reject) => {
@@ -19,6 +13,23 @@ const runCommand = (cmd) => {
   });
 };
 
-exports.generatePath = generatePath;
-exports.copyFiles = copyFiles;
-exports.runCommand = runCommand;
+const log = {
+  info(msg = '') {
+    console.log(chalk.blue(`${msg}`));
+  },
+  success(msg = '') {
+    console.log(chalk.green(`${msg}`));
+  },
+  warn(msg = '') {
+    console.log(chalk.yellow(`\nWarn: ${msg}\n`));
+  },
+  error(msg = '') {
+    console.log(chalk.red(`\nFail: ${msg}\n`));
+  },
+};
+
+module.exports = {
+  generatePath,
+  runCommand,
+  log,
+};
