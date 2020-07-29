@@ -7,10 +7,10 @@ const config = require('../config');
 const packageTemplate = require('../templates/package.json');
 const wxConfigTemplate = require('../templates/project.config.json');
 const swanConfigTemplate = require('../templates/project.swan.json');
-const { generatePath, copyFiles, runCommand, log } = require('../utils');
+const { generatePath, runCommand, log } = require('../utils');
 
 class CreateCommand {
-  constructor(source, destination) {
+  constructor(source) {
     this.projectName = source;
     this.tempPath = generatePath(__dirname, '../../__temp__');
     this.targetPath = generatePath(process.cwd(), source);
