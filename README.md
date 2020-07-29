@@ -5,7 +5,7 @@
 ## Installation
 
 ```shell
-$ npm install medusa-cli -g
+$ npm install @chirono/medusa-cli -g
 ```
 
 ## Usage
