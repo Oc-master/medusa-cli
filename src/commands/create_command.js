@@ -68,8 +68,8 @@ class CreateCommand {
   /**
    * 下载项目模板，暂存至中间文件夹
    */
-  async downloadRepository() {
-    return new Promise((resolve, reject) => {
+  downloadRepository() {
+    return new Promise(async (resolve, reject) => {
       const { platform } = config.inquirerConfig;
       const { operation } = await inquirer.prompt(platform);
       const { repositoryUrl } = config;
