@@ -1,3 +1,17 @@
+## [1.0.1](https://github.com/Oc-master/medusa-cli/compare/v1.0.0...v1.0.1) (2020-07-30)
+
+
+### Bug Fixes
+
+* **commands/create_command.js:** 修复下载功能异常问题 ([a4fcdb6](https://github.com/Oc-master/medusa-cli/commit/a4fcdb6a201e6c6a4d597428415dcf410dfe1f48))
+
+
+### Features
+
+* **commands/create_command.js:** 修改download功能,添加选择平台进行下载功能 ([6e701e5](https://github.com/Oc-master/medusa-cli/commit/6e701e5e5eec323927d8831439fdf8b251733a94))
+
+
+
 # 1.0.0 (2020-07-29)
 
 
