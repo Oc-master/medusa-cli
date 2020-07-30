@@ -5,8 +5,6 @@ const download = require('download-git-repo');
 
 const config = require('../config');
 const packageTemplate = require('../templates/package.json');
-const wxConfigTemplate = require('../templates/project.config.json');
-const swanConfigTemplate = require('../templates/project.swan.json');
 const { generatePath, runCommand, log } = require('../utils');
 
 class CreateCommand {
@@ -20,15 +18,16 @@ class CreateCommand {
 
   async init() {
     this.checkFolderExists();
-    const platform = await this.choosePlatform();
     await this.downloadRepository();
-    await this.copyFiles(this.tempPath, this.targetPath);
-    this.generateConfigJson(platform);
+    this.copyFiles(this.tempPath, this.targetPath);
     await this.generatePackageJson();
     await this.initializeGit();
     await this.runApp();
   }
 
+  /**
+   * 检查目标目录是否已存在
+   */
   async checkFolderExists() {
     const isExists = fs.pathExistsSync(this.targetPath);
     if (!isExists) return undefined;
@@ -66,32 +65,18 @@ class CreateCommand {
     }
   }
 
-  async choosePlatform() {
-    const { platform } = config.inquirerConfig;
-    const { operation } = await inquirer.prompt(platform);
-    return operation;
-  }
-
-  generateConfigJson(platform) {
-    if (platform === 'wx') {
-      const jsonPath = generatePath(this.targetPath, 'project.config.json');
-      fs.writeJsonSync(jsonPath, wxConfigTemplate, { spaces: '\t' });
-    } else {
-      const jsonPath = generatePath(this.targetPath, 'project.swan.json');
-      fs.writeJsonSync(jsonPath, swanConfigTemplate, { spaces: '\t' });
-    }
-  }
-
   /**
    * 下载项目模板，暂存至中间文件夹
    */
-  downloadRepository() {
+  async downloadRepository() {
     return new Promise((resolve, reject) => {
+      const { platform } = config.inquirerConfig;
+      const { operation } = await inquirer.prompt(platform);
       const { repositoryUrl } = config;
       this.spinner.start('正在拉取项目模版...');
       /** 删除原有的暂存项目模板目录，保证用户使用最新的项目模板 */
       fs.removeSync(this.tempPath);
-      download(repositoryUrl, this.tempPath, (error) => {
+      download(`${repositoryUrl}#${operation}`, this.tempPath, (error) => {
         if (error) {
           this.spinner.fail('获取项目模板失败，请重试！');
           return reject(error);
@@ -102,12 +87,20 @@ class CreateCommand {
     });
   }
 
+  /**
+   * 迁移文件功能
+   * @param {String} sourcePath 源代码目录
+   * @param {String} targetPath 目标目录
+   */
   copyFiles(sourcePath, targetPath) {
     const excludeList = ['.git', 'CHANGELOG.md', 'README.md'];
     fs.copySync(sourcePath, targetPath);
     excludeList.forEach((item) => void fs.removeSync(generatePath(targetPath, item)));
   };
 
+  /**
+   * 生成package.json功能
+   */
   async generatePackageJson() {
     const { projectInfo } = config.inquirerConfig;
     projectInfo[0].default = this.projectName;
@@ -119,13 +112,16 @@ class CreateCommand {
       description,
       repository: {
         ...packageTemplate.repository,
-        url: repository,
-      },
+        url: repository
+      }
     };
     const jsonPath = generatePath(this.targetPath, 'package.json');
     fs.writeJsonSync(jsonPath, data, { spaces: '\t' });
   }
 
+  /**
+   * 初始化版本管理工具
+   */
   async initializeGit() {
     this.spinner.start('开始初始化Git管理工具...');
     try {
@@ -140,6 +136,9 @@ class CreateCommand {
     }
   }
 
+  /**
+   * 安装项目依赖功能
+   */
   async runApp() {
     this.spinner.start('正在安装项目依赖文件，请稍等...');
     try {
