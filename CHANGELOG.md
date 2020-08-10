@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.2) (2020-08-10)
+
+
+### Features
+
+* **templates/package.json:** 更新eslint-config-medusa依赖包 ([1a10c39](https://github.com/Oc-master/medusa-cli/commit/1a10c39b1e2ba6a98bce35e8b9ce2843d2ad3ab6))
+
+
+
 ## [1.0.1](https://github.com/Oc-master/medusa-cli/compare/v1.0.0...v1.0.1) (2020-07-30)
 
 
