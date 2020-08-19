@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.3) (2020-08-19)
+
+
+### Features
+
+* **templates/package.json:** 锁定相关依赖的版本 ([07e0432](https://github.com/Oc-master/medusa-cli/commit/07e04322041652160ae1cec9ad9c63b83e21f215))
+
+
+
 ## [1.0.2](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.2) (2020-08-10)
 
 
