@@ -15,3 +15,7 @@ $ npm install @chirono/medusa-cli -g
 ```shell
 $ medusa create <project-name>
 ```
+
+## License
+
+[MIT](https://github.com/Oc-master/medusa-cli/blob/master/LICENSE)
