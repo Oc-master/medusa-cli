@@ -16,6 +16,6 @@
   "devDependencies": {
     "eslint-config-medusa": "1.0.3",
     "stylelint-config-medusa": "1.0.0",
-    "webpack-build-miniprogram": "1.1.4"
+    "webpack-build-miniprogram": "1.1.5"
   }
 }
