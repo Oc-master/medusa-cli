@@ -1,3 +1,12 @@
+## [1.0.5](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.5) (2020-09-14)
+
+
+### Features
+
+* **src/templates/package.json:** 升级webpack-build-miniprogram版本 ([64c193f](https://github.com/Oc-master/medusa-cli/commit/64c193f6a962daefaa0f38aa012074d41d6a92f7))
+
+
+
 ## [1.0.4](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.4) (2020-08-25)
 
 
