@@ -1,3 +1,12 @@
+## [1.0.7](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.7) (2020-09-18)
+
+
+### Features
+
+* **src/templates/package.json:** 添加husky lint-staged工具提供commit时代码检测功能 ([ca4c0a0](https://github.com/Oc-master/medusa-cli/commit/ca4c0a0a9ee64ec2431d01ae1fd7540d5154fcd2))
+
+
+
 ## [1.0.6](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.6) (2020-09-16)
 
 
