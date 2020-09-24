@@ -1,3 +1,12 @@
+## [1.0.8](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.8) (2020-09-24)
+
+
+### Features
+
+* **templates/package.json:** 添加commitlint相关依赖包并增加提交前检查配置 ([01abb12](https://github.com/Oc-master/medusa-cli/commit/01abb1278f9f7b4603b0df0eafbb47a453fc01fc))
+
+
+
 ## [1.0.7](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.7) (2020-09-18)
 
 
@@ -77,6 +86,3 @@
 
 * **package.json:** 初始化项目信息配置 ([8356d33](https://github.com/Oc-master/medusa-cli/commit/8356d33bbd2636524b7b5b073625dc7da849808c))
 * **src/commands/create_command.js:** 优化初始化命令执行代码 ([d09accb](https://github.com/Oc-master/medusa-cli/commit/d09accbade4e533da0afb40b7b1b7d9527c55dc5))
-
-
-
