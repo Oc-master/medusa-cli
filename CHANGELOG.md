@@ -22,10 +22,6 @@
 ### Features
 
 * **src/templates/package.json:** 升级webpack-build-miniprogram版本 ([b7093fa](https://github.com/Oc-master/medusa-cli/commit/b7093fac537b3e98a5d3c78296c46f2742954830))
-* **src/templates/package.json:** 升级webpack-build-miniprogram版本 ([64c193f](https://github.com/Oc-master/medusa-cli/commit/64c193f6a962daefaa0f38aa012074d41d6a92f7))
-* **src/templates/package.json:** 升级webpack-build-miniprogram版本 ([a6e20ef](https://github.com/Oc-master/medusa-cli/commit/a6e20ef479645bb8b2bea3deb558ebc004b80ad7))
-* **templates/package.json:** 更新eslint-config-medusa依赖包 ([1a10c39](https://github.com/Oc-master/medusa-cli/commit/1a10c39b1e2ba6a98bce35e8b9ce2843d2ad3ab6))
-* **templates/package.json:** 锁定相关依赖的版本 ([07e0432](https://github.com/Oc-master/medusa-cli/commit/07e04322041652160ae1cec9ad9c63b83e21f215))
 
 
 
