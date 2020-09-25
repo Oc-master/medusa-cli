@@ -17,11 +17,14 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@commitlint/format": "^11.0.0",
-    "eslint-config-medusa": "1.0.3",
+    "eslint-config-medusa": "1.0.4",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
     "stylelint-config-medusa": "1.0.0",
-    "webpack-build-miniprogram": "1.2.2"
+    "webpack-build-miniprogram": "1.2.3"
+  },
+  "dependencies": {
+    "medusa-wx-router": "1.0.2"
   },
   "husky": {
     "hooks": {
