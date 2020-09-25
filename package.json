@@ -1,6 +1,6 @@
 {
   "name": "@chirono/medusa-cli",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "快速生成小程序基础框架的解决方案",
   "main": "index.js",
   "bin": {

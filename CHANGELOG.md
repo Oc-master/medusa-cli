@@ -1,3 +1,12 @@
+## [1.0.9](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.9) (2020-09-25)
+
+
+### Features
+
+* **src/templates/package.json:** 升级webpack-build-miniprogram eslint-config-medusa工具版本 ([947a08d](https://github.com/Oc-master/medusa-cli/commit/947a08d76d3f8fcdaa616785e03644b48c2efcf4))
+
+
+
 ## [1.0.8](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.8) (2020-09-24)
 
 
