@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "dev": "medusa-server development",
-		"build": "medusa-server production"
+    "build": "medusa-server production"
   },
   "repository": {
     "type": "git",
@@ -21,10 +21,10 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
     "stylelint-config-medusa": "1.0.0",
-    "webpack-build-miniprogram": "1.2.3"
+    "webpack-build-miniprogram": "1.2.4"
   },
   "dependencies": {
-    "medusa-wx-router": "1.0.2"
+    "medusa-wx-router": "1.0.3"
   },
   "husky": {
     "hooks": {
