@@ -17,7 +17,7 @@ class CreateCommand {
   }
 
   async init() {
-    this.checkFolderExists();
+    await this.checkFolderExists();
     await this.downloadRepository();
     this.copyFiles(this.tempPath, this.targetPath);
     await this.generatePackageJson();
@@ -60,7 +60,7 @@ class CreateCommand {
       } else {
         process.exit(0);
       }
-    } catch(err) {
+    } catch (err) {
       log.error(err);
     }
   }
@@ -130,7 +130,7 @@ class CreateCommand {
       await runCommand('git init');
       await runCommand('git add . && git commit -m "feat(*): 初始化项目基础框架"');
       this.spinner.succeed('版本管理工具初始化完毕！');
-    } catch(err) {
+    } catch (err) {
       this.spinner.stop();
       log.error(err);
     }
