@@ -1,3 +1,12 @@
+## [1.0.11](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.11) (2020-10-27)
+
+
+### Bug Fixes
+
+* **src/commands/create_command.js:** 修复遇到重名文件名时运行顺序有误问题 ([1142ccb](https://github.com/Oc-master/medusa-cli/commit/1142ccbea4ce4277903140c94996fd75b5566b27))
+
+
+
 ## [1.0.10](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.10) (2020-10-26)
 
 
