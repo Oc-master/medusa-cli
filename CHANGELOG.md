@@ -1,3 +1,13 @@
+## [1.0.12](https://github.com/Oc-master/medusa-cli/compare/v1.0.11...v1.0.12) (2020-10-29)
+
+
+### Features
+
+* **src/commands/add_command.js:** 完成初始化页面、组件命令功能 ([c57e73c](https://github.com/Oc-master/medusa-cli/commit/c57e73c41046589e6bb6d525c97e03feab3de794))
+* **src/templates/:** 添加页面、组件文件模版 ([f1c6db9](https://github.com/Oc-master/medusa-cli/commit/f1c6db9bc2ba667e41bec8d1db6a39a64c130230))
+
+
+
 ## [1.0.11](https://github.com/Oc-master/medusa-cli/compare/v1.0.1...v1.0.11) (2020-10-27)
 
 
