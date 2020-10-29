@@ -1,5 +1,6 @@
-const chalk = require('chalk');
+const fs = require('fs');
 const path = require('path');
+const chalk = require('chalk');
 const childProcess = require('child_process');
 
 const generatePath = (root, targetPath) => path.resolve(root, targetPath);
@@ -28,8 +29,32 @@ const log = {
   },
 };
 
+const getAppConfig = () => {
+  try {
+    const choose = [];
+    const root = process.cwd();
+    const appJsonPath = path.resolve(root, 'src/app.json');
+    const content = JSON.parse(fs.readFileSync(appJsonPath, { encoding: 'utf-8' }));
+    const { pages = [], subpackages = [] } = content;
+    const { length: pagesLength } = pages;
+    if (pagesLength) {
+      choose.push({ name: '主包', value: './' });
+    }
+    const { length: subpackagesLength } = subpackages;
+    if (!subpackagesLength) return choose;
+    const temp = subpackages.map((subpackage) => {
+      const { root } = subpackage;
+      return { name: `分包：${root}`, value: `./${root}` };
+    });
+    return choose.concat(temp);
+  } catch (error) {
+    return [];
+  }
+}
+
 module.exports = {
   generatePath,
   runCommand,
   log,
+  getAppConfig,
 };

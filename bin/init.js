@@ -2,6 +2,7 @@
 const { program } = require('commander');
 const package = require('../package.json');
 const CreateCommand = require('../src/commands/create_command');
+const addCommand = require('../src/commands/add_command');
 
 program
   .version(package.version, '-v, --version', 'display version for medusa-cli')
@@ -18,8 +19,15 @@ program
     new CreateCommand(source, destination);
   })
 
+program
+  .command('add <name>')
+  .description('add page or component')
+  .action((source) => {
+    addCommand(source);
+  })
+
 try {
   program.parse(process.argv);
-} catch(error) {
+} catch (error) {
   console.log('error: ', error);
 }

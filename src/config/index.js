@@ -42,6 +42,15 @@ module.exports = {
       name: 'repository',
       type: 'input',
       message: '请输入仓库地址: ',
-    },],
+    }],
+    typeChoose: [{
+      name: 'type',
+      type: 'list',
+      message: '请选择当前要添加的文件类型（Page or Component）：',
+      choices: [
+        { name: 'Page', value: 'pages' },
+        { name: 'Component', value: 'components' },
+      ],
+    }],
   },
 };
