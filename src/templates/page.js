@@ -15,11 +15,12 @@ import './index.less';
 
 Page({
   data: {},
-  onLoad() { },
+  onLoad(options) { },
 });
 `;
 
 exports.pageJson = `{
+  "navigationBarTitleText": "",
   "usingComponents": {}
 }
 `;
