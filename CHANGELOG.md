@@ -1,3 +1,12 @@
+## [1.0.13](https://github.com/Oc-master/medusa-cli/compare/v1.0.12...v1.0.13) (2020-12-07)
+
+
+### Features
+
+* **templates/page.js:** 完善生成页面模版内容 ([12a891e](https://github.com/Oc-master/medusa-cli/commit/12a891e777c5a5857a25e948a3b06c5609ba361a))
+
+
+
 ## [1.0.12](https://github.com/Oc-master/medusa-cli/compare/v1.0.11...v1.0.12) (2020-10-29)
 
 
