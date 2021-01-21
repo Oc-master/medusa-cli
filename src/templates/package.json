@@ -13,18 +13,20 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "medusa-wx-router": "1.0.5",
+    "medusa-wx-toast": "1.0.1"
+  },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@commitlint/format": "^11.0.0",
-    "eslint-config-medusa": "1.0.4",
+    "eslint-config-medusa": "1.0.7",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
-    "stylelint-config-medusa": "1.0.0",
-    "webpack-build-miniprogram": "1.2.4"
-  },
-  "dependencies": {
-    "medusa-wx-router": "1.0.3"
+    "pug": "^3.0.0",
+    "stylelint-config-medusa": "1.0.1",
+    "webpack-build-miniprogram": "2.0.3"
   },
   "husky": {
     "hooks": {
