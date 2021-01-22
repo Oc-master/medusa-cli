@@ -1,3 +1,12 @@
+## [1.0.14](https://github.com/Oc-master/medusa-cli/compare/v1.0.13...v1.0.14) (2021-01-22)
+
+
+### Features
+
+* **templates/package.json:** 更新项目依赖 ([a51e2c1](https://github.com/Oc-master/medusa-cli/commit/a51e2c1712d923d0269e2c98fe516566016def67))
+
+
+
 ## [1.0.13](https://github.com/Oc-master/medusa-cli/compare/v1.0.12...v1.0.13) (2020-12-07)
 
 
